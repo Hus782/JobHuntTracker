@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DA7476352B09157D0013E01C /* JobApplicationEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7476332B09157D0013E01C /* JobApplicationEntity+CoreDataClass.swift */; };
+		DA7476362B09157D0013E01C /* JobApplicationEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7476342B09157D0013E01C /* JobApplicationEntity+CoreDataProperties.swift */; };
+		DA7476392B0915E90013E01C /* JobApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7476382B0915E90013E01C /* JobApplication.swift */; };
 		DADEE54F2B03662E0009AA17 /* JobHuntTrackerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADEE54E2B03662E0009AA17 /* JobHuntTrackerApp.swift */; };
 		DADEE5512B03662E0009AA17 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADEE5502B03662E0009AA17 /* ContentView.swift */; };
 		DADEE5532B0366300009AA17 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DADEE5522B0366300009AA17 /* Assets.xcassets */; };
@@ -38,6 +41,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DA7476332B09157D0013E01C /* JobApplicationEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JobApplicationEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
+		DA7476342B09157D0013E01C /* JobApplicationEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JobApplicationEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		DA7476382B0915E90013E01C /* JobApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobApplication.swift; sourceTree = "<group>"; };
 		DADEE54B2B03662E0009AA17 /* JobHuntTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JobHuntTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DADEE54E2B03662E0009AA17 /* JobHuntTrackerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobHuntTrackerApp.swift; sourceTree = "<group>"; };
 		DADEE5502B03662E0009AA17 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -79,9 +85,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DA7476372B0915D70013E01C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				DA7476382B0915E90013E01C /* JobApplication.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		DADEE5422B03662E0009AA17 = {
 			isa = PBXGroup;
 			children = (
+				DA7476332B09157D0013E01C /* JobApplicationEntity+CoreDataClass.swift */,
+				DA7476342B09157D0013E01C /* JobApplicationEntity+CoreDataProperties.swift */,
 				DADEE54D2B03662E0009AA17 /* JobHuntTracker */,
 				DADEE5632B0366300009AA17 /* JobHuntTrackerTests */,
 				DADEE56D2B0366300009AA17 /* JobHuntTrackerUITests */,
@@ -102,6 +118,7 @@
 		DADEE54D2B03662E0009AA17 /* JobHuntTracker */ = {
 			isa = PBXGroup;
 			children = (
+				DA7476372B0915D70013E01C /* Models */,
 				DADEE54E2B03662E0009AA17 /* JobHuntTrackerApp.swift */,
 				DADEE5502B03662E0009AA17 /* ContentView.swift */,
 				DADEE5522B0366300009AA17 /* Assets.xcassets */,
@@ -270,11 +287,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				DADEE57E2B036E950009AA17 /* TopStatusView.swift in Sources */,
+				DA7476392B0915E90013E01C /* JobApplication.swift in Sources */,
 				DADEE5582B0366300009AA17 /* Persistence.swift in Sources */,
 				DADEE55B2B0366300009AA17 /* JobHuntTracker.xcdatamodeld in Sources */,
 				DADEE5512B03662E0009AA17 /* ContentView.swift in Sources */,
 				DADEE5802B03784D0009AA17 /* ProfileView.swift in Sources */,
+				DA7476352B09157D0013E01C /* JobApplicationEntity+CoreDataClass.swift in Sources */,
 				DADEE54F2B03662E0009AA17 /* JobHuntTrackerApp.swift in Sources */,
+				DA7476362B09157D0013E01C /* JobApplicationEntity+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -14,8 +14,7 @@ struct JobHuntTrackerApp: App {
     var body: some Scene {
         WindowGroup {
             JobApplicationsListView()
-//            ContentView()
-//                .environment(\.managedObjectContext, persistenceController.container.viewContext)
+                .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }
 }
