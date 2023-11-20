@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DA17CBE12B0B4FF8003ADAC7 /* JobApplicationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA17CBE02B0B4FF8003ADAC7 /* JobApplicationView.swift */; };
+		DA17CBE32B0B50D9003ADAC7 /* JobApplicationDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA17CBE22B0B50D9003ADAC7 /* JobApplicationDetailsView.swift */; };
 		DA7476352B09157D0013E01C /* JobApplicationEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7476332B09157D0013E01C /* JobApplicationEntity+CoreDataClass.swift */; };
 		DA7476362B09157D0013E01C /* JobApplicationEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7476342B09157D0013E01C /* JobApplicationEntity+CoreDataProperties.swift */; };
 		DA7476392B0915E90013E01C /* JobApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7476382B0915E90013E01C /* JobApplication.swift */; };
@@ -41,6 +43,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DA17CBE02B0B4FF8003ADAC7 /* JobApplicationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobApplicationView.swift; sourceTree = "<group>"; };
+		DA17CBE22B0B50D9003ADAC7 /* JobApplicationDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobApplicationDetailsView.swift; sourceTree = "<group>"; };
 		DA7476332B09157D0013E01C /* JobApplicationEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JobApplicationEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
 		DA7476342B09157D0013E01C /* JobApplicationEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JobApplicationEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		DA7476382B0915E90013E01C /* JobApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobApplication.swift; sourceTree = "<group>"; };
@@ -85,6 +89,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DA17CBDF2B0B4FE7003ADAC7 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DADEE57D2B036E950009AA17 /* TopStatusView.swift */,
+				DA17CBE02B0B4FF8003ADAC7 /* JobApplicationView.swift */,
+				DADEE57F2B03784D0009AA17 /* ProfileView.swift */,
+				DA17CBE22B0B50D9003ADAC7 /* JobApplicationDetailsView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		DA7476372B0915D70013E01C /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -118,6 +133,7 @@
 		DADEE54D2B03662E0009AA17 /* JobHuntTracker */ = {
 			isa = PBXGroup;
 			children = (
+				DA17CBDF2B0B4FE7003ADAC7 /* Views */,
 				DA7476372B0915D70013E01C /* Models */,
 				DADEE54E2B03662E0009AA17 /* JobHuntTrackerApp.swift */,
 				DADEE5502B03662E0009AA17 /* ContentView.swift */,
@@ -125,8 +141,6 @@
 				DADEE5572B0366300009AA17 /* Persistence.swift */,
 				DADEE5592B0366300009AA17 /* JobHuntTracker.xcdatamodeld */,
 				DADEE5542B0366300009AA17 /* Preview Content */,
-				DADEE57D2B036E950009AA17 /* TopStatusView.swift */,
-				DADEE57F2B03784D0009AA17 /* ProfileView.swift */,
 			);
 			path = JobHuntTracker;
 			sourceTree = "<group>";
@@ -293,8 +307,10 @@
 				DADEE5512B03662E0009AA17 /* ContentView.swift in Sources */,
 				DADEE5802B03784D0009AA17 /* ProfileView.swift in Sources */,
 				DA7476352B09157D0013E01C /* JobApplicationEntity+CoreDataClass.swift in Sources */,
+				DA17CBE12B0B4FF8003ADAC7 /* JobApplicationView.swift in Sources */,
 				DADEE54F2B03662E0009AA17 /* JobHuntTrackerApp.swift in Sources */,
 				DA7476362B09157D0013E01C /* JobApplicationEntity+CoreDataProperties.swift in Sources */,
+				DA17CBE32B0B50D9003ADAC7 /* JobApplicationDetailsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
