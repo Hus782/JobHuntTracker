@@ -17,12 +17,8 @@ struct JobApplicationsListView: View {
             sortDescriptors: [NSSortDescriptor(keyPath: \JobApplicationEntity.applicationDate, ascending: true)],
             animation: .default)
     private var jobApplications: FetchedResults<JobApplicationEntity>
-
-//    let applications: [JobApplication] = [
-//        // Sample data
-//        .init(companyName: "Company A", jobTitle: "Software Engineer", applicationDate: "Jan 1, 2023", status: "Applied", logoName: "logo1"),
-//        .init(companyName: "Company B", jobTitle: "Product Manager", applicationDate: "Feb 15, 2023", status: "Interviewing", logoName: "logo2"),
-//    ]
+    @State private var showingAddJobApplicationView = false
+    
 
     var body: some View {
         NavigationStack {
@@ -58,10 +54,15 @@ struct JobApplicationsListView: View {
                 leading: Button(action: {}) {
                     Image(systemName: "line.horizontal.3.decrease.circle.fill")
                 },
-                trailing: Button(action: addJobApplication) {
+                trailing: Button(action: {
+                    showingAddJobApplicationView = true
+                }) {
                                Image(systemName: "plus.circle.fill")
-                           }
+                }
             )
+            .sheet(isPresented: $showingAddJobApplicationView) {
+                          AddJobApplicationView().environment(\.managedObjectContext, self.viewContext)
+            }
         }
         .background(Color.white)
     }

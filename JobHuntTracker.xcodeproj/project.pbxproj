@@ -11,6 +11,7 @@
 		DA17CBE32B0B50D9003ADAC7 /* JobApplicationDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA17CBE22B0B50D9003ADAC7 /* JobApplicationDetailsView.swift */; };
 		DA676F5D2B0CD452001CC2F1 /* JobApplicationEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA676F5B2B0CD452001CC2F1 /* JobApplicationEntity+CoreDataClass.swift */; };
 		DA676F5E2B0CD452001CC2F1 /* JobApplicationEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA676F5C2B0CD452001CC2F1 /* JobApplicationEntity+CoreDataProperties.swift */; };
+		DA676F622B0CE33A001CC2F1 /* AddJobApplicationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA676F612B0CE33A001CC2F1 /* AddJobApplicationView.swift */; };
 		DA7476392B0915E90013E01C /* JobApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7476382B0915E90013E01C /* JobApplication.swift */; };
 		DADEE54F2B03662E0009AA17 /* JobHuntTrackerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADEE54E2B03662E0009AA17 /* JobHuntTrackerApp.swift */; };
 		DADEE5512B03662E0009AA17 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADEE5502B03662E0009AA17 /* ContentView.swift */; };
@@ -47,6 +48,7 @@
 		DA17CBE22B0B50D9003ADAC7 /* JobApplicationDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobApplicationDetailsView.swift; sourceTree = "<group>"; };
 		DA676F5B2B0CD452001CC2F1 /* JobApplicationEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JobApplicationEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
 		DA676F5C2B0CD452001CC2F1 /* JobApplicationEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JobApplicationEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		DA676F612B0CE33A001CC2F1 /* AddJobApplicationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddJobApplicationView.swift; sourceTree = "<group>"; };
 		DA7476382B0915E90013E01C /* JobApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobApplication.swift; sourceTree = "<group>"; };
 		DADEE54B2B03662E0009AA17 /* JobHuntTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JobHuntTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DADEE54E2B03662E0009AA17 /* JobHuntTrackerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobHuntTrackerApp.swift; sourceTree = "<group>"; };
@@ -96,6 +98,7 @@
 				DA17CBE02B0B4FF8003ADAC7 /* JobApplicationView.swift */,
 				DADEE57F2B03784D0009AA17 /* ProfileView.swift */,
 				DA17CBE22B0B50D9003ADAC7 /* JobApplicationDetailsView.swift */,
+				DA676F612B0CE33A001CC2F1 /* AddJobApplicationView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -301,6 +304,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DADEE57E2B036E950009AA17 /* TopStatusView.swift in Sources */,
+				DA676F622B0CE33A001CC2F1 /* AddJobApplicationView.swift in Sources */,
 				DA7476392B0915E90013E01C /* JobApplication.swift in Sources */,
 				DADEE5582B0366300009AA17 /* Persistence.swift in Sources */,
 				DADEE55B2B0366300009AA17 /* JobHuntTracker.xcdatamodeld in Sources */,
