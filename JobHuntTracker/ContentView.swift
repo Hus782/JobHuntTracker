@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-//import CoreData.NSManagedObjectContext
 
 
 struct JobApplicationsListView: View {
@@ -56,8 +55,11 @@ struct JobApplicationsListView: View {
                 }
             )
             .sheet(isPresented: $showingAddJobApplicationView) {
-                          AddJobApplicationView().environment(\.managedObjectContext, self.viewContext)
+                AddJobApplicationView(onAddCompletion: {
+                    viewModel.fetchJobApplications(viewContext: viewContext)
+                })
             }
+            
         }
         .background(Color.white)
         .onAppear {
