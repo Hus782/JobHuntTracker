@@ -73,6 +73,9 @@ struct JobApplicationsListView: View {
               newJobApplication.jobTitle = "New Position"
               newJobApplication.applicationDate = Date()
               newJobApplication.status = "Applied"
+              newJobApplication.location = "New York"
+              newJobApplication.lastUpdated = Date()
+              newJobApplication.link = "https://www.google.com/"
               // Set other properties as needed
 
               do {

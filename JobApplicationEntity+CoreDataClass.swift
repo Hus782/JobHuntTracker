@@ -2,7 +2,7 @@
 //  JobApplicationEntity+CoreDataClass.swift
 //  JobHuntTracker
 //
-//  Created by user248930 on 11/18/23.
+//  Created by user248930 on 11/21/23.
 //
 //
 
