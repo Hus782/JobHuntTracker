@@ -24,7 +24,7 @@ struct JobApplicationDetailsView: View {
                 DetailView(title: "Last Updated", detail: itemFormatter.string(from: jobApplication.lastUpdated), icon: "arrow.up.arrow.down.circle")
                 
                 Spacer()
-                
+                    .navigationBarTitle(jobApplication.jobTitle, displayMode: .inline)
                     .navigationBarItems(
                         trailing: Button(action: {
                             showingEditJobApplicationView = true

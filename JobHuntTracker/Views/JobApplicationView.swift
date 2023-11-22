@@ -26,7 +26,7 @@ struct JobApplicationRow: View {
                     .font(.headline)
                 Text(application.companyName)
                     .font(.subheadline)
-                Text("application.applicationDate")
+                Text(formatDateToString(application.applicationDate))
                     .font(.caption)
                     .foregroundColor(.secondary)
             }
@@ -74,4 +74,12 @@ struct JobApplicationRow: View {
             return .gray
         }
     }
+    
+    func formatDateToString(_ date: Date) -> String {
+        let formatter = DateFormatter()
+        formatter.dateStyle = .long
+        formatter.timeStyle = .none
+        return formatter.string(from: date)
+    }
+
 }

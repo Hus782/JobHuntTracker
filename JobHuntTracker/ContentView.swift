@@ -18,7 +18,7 @@ struct JobApplicationsListView: View {
         NavigationStack {
             VStack(spacing: 40) {
                 // Upper element view
-                ProfileOverviewView(userName: "Hus", userTitle: "iOS Developer", applicationsThisMonth: 5, monthlyTarget: 10)
+                ProfileOverviewView(userName: "Hyusein", userTitle: "iOS Developer", applicationsThisMonth: 5, monthlyTarget: 10)
                     .padding(.horizontal)
                 
                 TopStatusView(statusCounts: viewModel.statusCounts)
