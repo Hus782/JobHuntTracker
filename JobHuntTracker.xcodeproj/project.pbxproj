@@ -14,6 +14,8 @@
 		DA676F622B0CE33A001CC2F1 /* AddJobApplicationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA676F612B0CE33A001CC2F1 /* AddJobApplicationView.swift */; };
 		DA676F652B0CE842001CC2F1 /* JobApplicationsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA676F642B0CE842001CC2F1 /* JobApplicationsViewModel.swift */; };
 		DA676F672B0CF0BD001CC2F1 /* AddJobApplicationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA676F662B0CF0BD001CC2F1 /* AddJobApplicationViewModel.swift */; };
+		DA676F692B0CFCC6001CC2F1 /* EditJobApplicationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA676F682B0CFCC6001CC2F1 /* EditJobApplicationView.swift */; };
+		DA676F6B2B0CFD27001CC2F1 /* EditJobApplicationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA676F6A2B0CFD27001CC2F1 /* EditJobApplicationViewModel.swift */; };
 		DA7476392B0915E90013E01C /* JobApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7476382B0915E90013E01C /* JobApplication.swift */; };
 		DADEE54F2B03662E0009AA17 /* JobHuntTrackerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADEE54E2B03662E0009AA17 /* JobHuntTrackerApp.swift */; };
 		DADEE5512B03662E0009AA17 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADEE5502B03662E0009AA17 /* ContentView.swift */; };
@@ -53,6 +55,8 @@
 		DA676F612B0CE33A001CC2F1 /* AddJobApplicationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddJobApplicationView.swift; sourceTree = "<group>"; };
 		DA676F642B0CE842001CC2F1 /* JobApplicationsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobApplicationsViewModel.swift; sourceTree = "<group>"; };
 		DA676F662B0CF0BD001CC2F1 /* AddJobApplicationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddJobApplicationViewModel.swift; sourceTree = "<group>"; };
+		DA676F682B0CFCC6001CC2F1 /* EditJobApplicationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditJobApplicationView.swift; sourceTree = "<group>"; };
+		DA676F6A2B0CFD27001CC2F1 /* EditJobApplicationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditJobApplicationViewModel.swift; sourceTree = "<group>"; };
 		DA7476382B0915E90013E01C /* JobApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobApplication.swift; sourceTree = "<group>"; };
 		DADEE54B2B03662E0009AA17 /* JobHuntTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JobHuntTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DADEE54E2B03662E0009AA17 /* JobHuntTrackerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobHuntTrackerApp.swift; sourceTree = "<group>"; };
@@ -103,6 +107,7 @@
 				DADEE57F2B03784D0009AA17 /* ProfileView.swift */,
 				DA17CBE22B0B50D9003ADAC7 /* JobApplicationDetailsView.swift */,
 				DA676F612B0CE33A001CC2F1 /* AddJobApplicationView.swift */,
+				DA676F682B0CFCC6001CC2F1 /* EditJobApplicationView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -112,6 +117,7 @@
 			children = (
 				DA676F642B0CE842001CC2F1 /* JobApplicationsViewModel.swift */,
 				DA676F662B0CF0BD001CC2F1 /* AddJobApplicationViewModel.swift */,
+				DA676F6A2B0CFD27001CC2F1 /* EditJobApplicationViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -324,12 +330,14 @@
 				DADEE55B2B0366300009AA17 /* JobHuntTracker.xcdatamodeld in Sources */,
 				DADEE5512B03662E0009AA17 /* ContentView.swift in Sources */,
 				DA676F5D2B0CD452001CC2F1 /* JobApplicationEntity+CoreDataClass.swift in Sources */,
+				DA676F6B2B0CFD27001CC2F1 /* EditJobApplicationViewModel.swift in Sources */,
 				DADEE5802B03784D0009AA17 /* ProfileView.swift in Sources */,
 				DA17CBE12B0B4FF8003ADAC7 /* JobApplicationView.swift in Sources */,
 				DADEE54F2B03662E0009AA17 /* JobHuntTrackerApp.swift in Sources */,
 				DA676F672B0CF0BD001CC2F1 /* AddJobApplicationViewModel.swift in Sources */,
 				DA676F5E2B0CD452001CC2F1 /* JobApplicationEntity+CoreDataProperties.swift in Sources */,
 				DA17CBE32B0B50D9003ADAC7 /* JobApplicationDetailsView.swift in Sources */,
+				DA676F692B0CFCC6001CC2F1 /* EditJobApplicationView.swift in Sources */,
 				DA676F652B0CE842001CC2F1 /* JobApplicationsViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -9,6 +9,7 @@ import SwiftUI
 
 struct JobApplicationDetailsView: View {
     var jobApplication: JobApplicationEntity
+    @State private var showingEditJobApplicationView = false
 
     var body: some View {
         ScrollView {
@@ -25,10 +26,17 @@ struct JobApplicationDetailsView: View {
                 Spacer()
                 
                     .navigationBarItems(
-                        trailing: Button(action: editApplication) {
-                            Text("Edit")
+                        trailing: Button(action: {
+                            showingEditJobApplicationView = true
+                        }) {
+                                       Text("Edit")
                         }
                     )
+                
+                    .sheet(isPresented: $showingEditJobApplicationView) {
+                        EditJobApplicationView(jobApplication: jobApplication)
+                    }
+                
                 
             }
             .padding()
