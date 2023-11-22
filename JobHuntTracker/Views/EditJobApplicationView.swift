@@ -14,7 +14,7 @@ struct EditJobApplicationView: View {
     var onAddCompletion: (() -> Void)?
     
     init(jobApplication: JobApplicationEntity) {
-           _viewModel = StateObject(wrappedValue: EditJobApplicationViewModel(jobApplication: jobApplication))
+        _viewModel = StateObject(wrappedValue: EditJobApplicationViewModel(jobApplication: jobApplication))
     }
     
     var body: some View {
@@ -29,7 +29,11 @@ struct EditJobApplicationView: View {
                 }
                 
                 Section(header: Text("Status")) {
-                    TextField("Current Status", text: $viewModel.status)
+                    Picker("Status", selection: $viewModel.status) {
+                        ForEach(JobStatus.allCases, id: \.self) { status in
+                            Text(status.displayName).tag(status)
+                        }
+                    }
                 }
                 
                 Section(header: Text("Location")) {
@@ -47,19 +51,19 @@ struct EditJobApplicationView: View {
             }
             .navigationBarTitle("Edit Job", displayMode: .inline)
             .navigationBarItems(
-                        leading: Button(action: {
-                            presentationMode.wrappedValue.dismiss() // Dismiss the modal view
-                        }) {
-                            Image(systemName: "xmark")
-                        },
-                        trailing: Button("Save") {
-                            viewModel.updateJobApplication(context: viewContext)
-                            presentationMode.wrappedValue.dismiss() // Dismiss the modal view after saving
-                        }
-                    )
-//            .onAppear {
-//                    viewModel.onAddCompletion = onAddCompletion
-//                }
+                leading: Button(action: {
+                    presentationMode.wrappedValue.dismiss() // Dismiss the modal view
+                }) {
+                    Image(systemName: "xmark")
+                },
+                trailing: Button("Save") {
+                    viewModel.updateJobApplication(context: viewContext)
+                    presentationMode.wrappedValue.dismiss() // Dismiss the modal view after saving
+                }
+            )
+            //            .onAppear {
+            //                    viewModel.onAddCompletion = onAddCompletion
+            //                }
         }
     }
     

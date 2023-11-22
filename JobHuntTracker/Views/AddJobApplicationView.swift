@@ -25,7 +25,11 @@ struct AddJobApplicationView: View {
                 }
                 
                 Section(header: Text("Status")) {
-                    TextField("Current Status", text: $viewModel.status)
+                    Picker("Status", selection: $viewModel.status) {
+                        ForEach(JobStatus.allCases, id: \.self) { status in
+                            Text(status.displayName).tag(status)
+                        }
+                    }
                 }
                 
                 Section(header: Text("Location")) {
@@ -39,19 +43,19 @@ struct AddJobApplicationView: View {
             }
             .navigationBarTitle("New Job", displayMode: .inline)
             .navigationBarItems(
-                        leading: Button(action: {
-                            presentationMode.wrappedValue.dismiss() // Dismiss the modal view
-                        }) {
-                            Image(systemName: "xmark")
-                        },
-                        trailing: Button("Save") {
-                            viewModel.addNewJobApplication(context: viewContext)
-                            presentationMode.wrappedValue.dismiss() // Dismiss the modal view after saving
-                        }
-                    )
-            .onAppear {
-                    viewModel.onAddCompletion = onAddCompletion
+                leading: Button(action: {
+                    presentationMode.wrappedValue.dismiss() // Dismiss the modal view
+                }) {
+                    Image(systemName: "xmark")
+                },
+                trailing: Button("Save") {
+                    viewModel.addNewJobApplication(context: viewContext)
+                    presentationMode.wrappedValue.dismiss() // Dismiss the modal view after saving
                 }
+            )
+            .onAppear {
+                viewModel.onAddCompletion = onAddCompletion
+            }
         }
     }
     

@@ -12,10 +12,10 @@ final class AddJobApplicationViewModel: ObservableObject {
     var onAddCompletion: (() -> Void)?
     @Published var companyName: String = ""
     @Published var jobTitle: String = ""
-    @Published var status: String = ""
+    @Published var status: JobStatus = .applied
     @Published var location: String = ""
     @Published var link: String = ""
-   
+    
     
     func addNewJobApplication(context: NSManagedObjectContext) {
         let newJobApplication = JobApplicationEntity(context: context)
@@ -23,10 +23,10 @@ final class AddJobApplicationViewModel: ObservableObject {
         newJobApplication.jobTitle = jobTitle
         newJobApplication.applicationDate = Date()
         newJobApplication.lastUpdated = Date()
-        newJobApplication.status = status
+        newJobApplication.status = status.displayName
         newJobApplication.location = location
         newJobApplication.link = link
-
+        
         do {
             try context.save()
             onAddCompletion?() // Call the completion handler after saving
