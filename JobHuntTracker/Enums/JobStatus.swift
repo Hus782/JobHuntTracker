@@ -9,10 +9,9 @@
 enum JobStatus: String, CaseIterable {
     case applied = "Applied"
     case interviewing = "Interviewing"
-    case offer = "Offer"
-    case rejected = "Rejected"
-    case accepted = "Accepted"
-    case withdrawn = "Withdrawn"
+    case open = "Open"
+    case closed = "Closed"
+    
 
     var displayName: String {
         self.rawValue

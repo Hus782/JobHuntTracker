@@ -18,7 +18,7 @@ struct JobApplicationRow: View {
                 .scaledToFit()
                 .frame(width: 50, height: 50)
                 .foregroundColor(.white)
-                .background(statusColor(status: application.status))
+                .background(statusColor(status: JobStatus(rawValue: application.status) ?? .open))
                 .cornerRadius(8)
             
             VStack(alignment: .leading, spacing: 4) {
@@ -39,33 +39,37 @@ struct JobApplicationRow: View {
                 .foregroundColor(.white)
                 .padding(.horizontal, 8)
                 .padding(.vertical, 4)
-                .background(statusColor(status: application.status))
+                .background(statusColor(status: JobStatus(rawValue: application.status) ?? .open))
                 .cornerRadius(8)
         }
         
         .padding() // Add padding to give the card some breathing room
-                .background(Color.white) // Set the background of the row to white
-                .cornerRadius(10) // Apply corner radius to the row for the card effect
-//                .shadow(radius: 2) // Optional: add a shadow for some depth
-                .listRowBackground(Color.clear)
-                .background(RoundedRectangle(cornerRadius: 10)
-                    .fill(Color.white))
+        .background(Color.white) // Set the background of the row to white
+        .cornerRadius(10) // Apply corner radius to the row for the card effect
+        //                .shadow(radius: 2) // Optional: add a shadow for some depth
+        .listRowBackground(Color.clear)
+        .background(RoundedRectangle(cornerRadius: 10)
+            .fill(Color.white))
         .shadow(color: .gray.opacity(0.3), radius: 10, x: 0, y: 4)
         .scaleEffect(isPressed ? 0.95 : 1.0)
         .animation(.spring(), value: isPressed)
-//        .onLongPressGesture(minimumDuration: 0.1, pressing: { pressing in
-//            withAnimation(.easeInOut(duration: 0.2)) {
-//                self.isPressed = pressing
-//            }
-//        }, perform: {})
+        //        .onLongPressGesture(minimumDuration: 0.1, pressing: { pressing in
+        //            withAnimation(.easeInOut(duration: 0.2)) {
+        //                self.isPressed = pressing
+        //            }
+        //        }, perform: {})
     }
     
-    func statusColor(status: String) -> Color {
+    func statusColor(status: JobStatus) -> Color {
         switch status {
-        case "Interviewing":
+        case .interviewing:
             return .blue
-        case "Applied":
+        case .applied:
             return .green
+        case .closed:
+            return .red
+        case .open:
+            return .orange
         default:
             return .gray
         }

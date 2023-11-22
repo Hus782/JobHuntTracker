@@ -29,6 +29,14 @@ final class JobApplicationsViewModel: ObservableObject {
         saveContext(viewContext: viewContext)
     }
     
+    var statusCounts: [JobStatus: Int] {
+           var counts = [JobStatus: Int]()
+           for status in JobStatus.allCases {
+               counts[status] = jobApplications.filter { $0.status == status.rawValue }.count
+           }
+           return counts
+       }
+    
     private func saveContext(viewContext: NSManagedObjectContext) {
         do {
             try viewContext.save()
